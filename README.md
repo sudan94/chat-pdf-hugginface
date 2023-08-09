@@ -26,6 +26,8 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+4. Add your HUGGINGFACEHUB_API_TOKEN in `.env.example` file and rename the file to `.env`
+
 ## Running the Project
 
 Once you have installed the required dependencies, you can run the project using Streamlit. Streamlit provides an easy way to create interactive web applications in Python.
