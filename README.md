@@ -1,6 +1,15 @@
 # Chat with PDF
 
-This is a fun Python project that allows you to chat with a chatbot about the PDF you uploaded. and generate a PDF transcript of the conversation. The project is built using Python and Streamlit framework.
+This Python project that allows you to chat with a chatbot about the PDF you uploaded. and generate a PDF transcript of the conversation. The project is built using Python and Streamlit framework.
+
+
+This is a fork from https://github.com/sudan94/chat-pdf-hugginface. I had issues install the requirements.txt, thus I removed the '==version' in requirements.txt with 
+```shell
+sed -i 's/\=.*//g' requirements.txt
+```
+Then, I added some modules that are needed for app.py that were not in requirements.txt.  
+
+A conda environment is used instead of ven virtual environment
 
 ## Installation
 
@@ -9,15 +18,15 @@ To run this project, please follow the steps below:
 1. Clone the repository:
 
 ```shell
-git clone https://github.com/sudan94/chat-pdf-hugginface.git
+git clone git@github.com:MattLondon101/chat-pdf-hugginface.git
 cd chat-pdf-hugginface
 ```
 
-2. Create and activate a virtual environment (optional but recommended):
+2. Create and activate a conda virtual environment (optional but recommended):
 
 ```shell
-python3 -m venv venv
-source venv/bin/activate
+conda create -n env1 python=3.10
+conda activate env1
 ```
 
 3. Install the dependencies from the `requirements.txt` file:
@@ -26,11 +35,11 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-4. Add your HUGGINGFACEHUB_API_TOKEN in `.env.example` file and rename the file to `.env`
+4. You will need a HUGGINGFACEHUB_API_TOKEN for this next step. To obtain one for free, got to https://huggingface.co/ and Sign Up for a free account. Then, go to Settings > Access Tokens. Create a New token. Then, create a file in this directory, name is `.env` and enter `HUGGINGFACEHUB_API_TOKEN = "token"`,  replacing `token` with your User Access Token. Save the `.env` file.
 
 ## Running the Project
 
-Once you have installed the required dependencies, you can run the project using Streamlit. Streamlit provides an easy way to create interactive web applications in Python.
+Once you have installed the required dependencies, you can run the project using Streamlit, which should have been installed with `requirements.txt`. Streamlit provides an easy way to create interactive web applications in Python.
 
 To start the application, run the following command:
 
