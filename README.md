@@ -44,7 +44,7 @@ Once you have installed the required dependencies, you can run the project using
 To start the application, run the following command:
 
 ```shell
-streamlit run appy.py
+streamlit run app.py
 ```
 
 This will start the Streamlit server and open the application in your default web browser..
