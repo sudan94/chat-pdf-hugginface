@@ -9,7 +9,7 @@ sed -i 's/\=.*//g' requirements.txt
 ```
 Then, I added some modules that are needed for app.py that were not in requirements.txt.  
 
-A conda environment is used instead of ven virtual environment
+A `conda` environment is used instead of `venv` virtual environment
 
 ## Installation
 
@@ -35,7 +35,7 @@ conda activate env1
 pip install -r requirements.txt
 ```
 
-4. You will need a HUGGINGFACEHUB_API_TOKEN for this next step. To obtain one for free, got to https://huggingface.co/ and Sign Up for a free account. Then, go to Settings > Access Tokens. Create a New token. Then, create a file in this directory, name is `.env` and enter `HUGGINGFACEHUB_API_TOKEN = "token"`,  replacing `token` with your User Access Token. Save the `.env` file.
+4. You will need a HUGGINGFACEHUB_API_TOKEN for this next step. To obtain one for free, got to https://huggingface.co/ and Sign Up for a free account. Then, go to Settings > Access Tokens. Create a New token. Then, create a file in this directory, name is `.env` and enter `HUGGINGFACEHUB_API_TOKEN = "token"`,  replacing `token` with your User Access Token. Save the `.env` file. The `.gitignore` file will ignore the `.env` for git operation.
 
 ## Running the Project
 
@@ -47,7 +47,19 @@ To start the application, run the following command:
 streamlit run app.py
 ```
 
-This will start the Streamlit server and open the application in your default web browser..
+This will start the Streamlit server and open the application in your default web browser..  
+
+### Git flow
+`.gitit.sh` can be used for easy pushing updates to remote repo.  
+
+Activate with:  
+```shell
+chmod +x .gitit.sh
+```
+Then, to add, commit, and push to remote repo:
+```
+./gitit.sh
+```
 
 ## License
 
